@@ -1,0 +1,13 @@
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    category-service: /categories/**
+    auth-service: /auth/**
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json,text/css,application/javascript
+    min-response-size: 2048

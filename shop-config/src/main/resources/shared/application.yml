@@ -1,0 +1,26 @@
+logging:
+  level:
+    org.springframework.security: info
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:5000/auth/users/current
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
