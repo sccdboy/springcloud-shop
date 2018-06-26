@@ -2,8 +2,10 @@ zuul:
   prefix: /api
   ignoredServices: '*'
   routes:
-    category-service: /categories/**
     auth-service: /auth/**
+    category-service: /categories/**
+    member-service: /members/**
+    product-service: /products/**
 
 server:
   port: 8080

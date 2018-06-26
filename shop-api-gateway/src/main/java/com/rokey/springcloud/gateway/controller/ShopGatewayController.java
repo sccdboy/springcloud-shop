@@ -1,6 +1,7 @@
 package com.rokey.springcloud.gateway.controller;
 
 import com.rokey.springcloud.gateway.client.CategoryServiceClient;
+import com.rokey.springcloud.gateway.client.ServiceCategory;
 import com.rokey.springcloud.gateway.dto.CategoryDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,12 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ShopGatewayController {
 
   @Autowired
-  private CategoryServiceClient categoryServiceClient;
+  private ServiceCategory serviceCategory;
 
   @GetMapping("category/root")
   public CategoryDTO getCategoryRoot() {
 
-    CategoryDTO rootCategory = categoryServiceClient.getRootCategory();
+    CategoryDTO rootCategory = serviceCategory.getCategoryRoot();
     return rootCategory;
   }
 
