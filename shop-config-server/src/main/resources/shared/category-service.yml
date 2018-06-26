@@ -1,4 +1,6 @@
 security:
+  basic:
+    enabled: false
   oauth2:
     client:
       clientId: category-service

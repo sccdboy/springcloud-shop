@@ -17,6 +17,9 @@ public class CategoryServiceClient {
   @Autowired
   private RestTemplate loadBalancedRestTemplate;
 
+  @Autowired
+  private ServiceCategory serviceCategory;
+
   public CategoryDTO getRootCategory() {
 
     return loadBalancedRestTemplate.getForObject("http://category-service/root", CategoryDTO.class);

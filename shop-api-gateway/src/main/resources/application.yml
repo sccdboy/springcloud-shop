@@ -7,4 +7,6 @@ zuul:
   routes:
     auth-service: /auth/**
     category-service: /categories/**
+    member-service: /members/**
+    product-service: /products/**
 
