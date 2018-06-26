@@ -1,0 +1,18 @@
+security:
+  oauth2:
+    client:
+      clientId: member-service
+      clientSecret: secret
+      accessTokenUri: http://localhost:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+server:
+  context-path: /members
+  port: 7000
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

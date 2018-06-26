@@ -21,16 +21,19 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <assertj.version>3.9.0</assertj.version>
     <apache.commons.lang.version>3.7</apache.commons.lang.version>
+    <lombok.version>1.18.0</lombok.version>
     <java.version>1.8</java.version>
-    <spring-cloud.version>Finchley.RC2</spring-cloud.version>
+    <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
   </properties>
 
   <modules>
-    <module>shop-config</module>
-    <module>shop-register</module>
-    <module>shop-gateway</module>
-    <module>auth-service</module>
-    <module>category-service</module>
+    <module>shop-config-server</module>
+    <module>shop-discovery-server</module>
+    <module>shop-api-gateway</module>
+    <module>shop-auth-service</module>
+    <module>shop-category-service</module>
+    <module>shop-member-service</module>
+    <module>shop-product-service</module>
   </modules>
 
   <dependencyManagement>
@@ -47,6 +50,11 @@
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-lang3</artifactId>
         <version>${apache.commons.lang.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
       </dependency>
       <dependency>
         <groupId>org.assertj</groupId>
