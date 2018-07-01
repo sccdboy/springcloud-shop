@@ -1,16 +1,15 @@
 security:
-  basic:
-    enabled: false
   oauth2:
     client:
       clientId: category-service
-      clientSecret: secret
+      clientSecret: 123456
       accessTokenUri: http://localhost:5000/auth/oauth/token
-      grant-type: client_credentials
+      grant-type: client_credentials,password
       scope: server
 
 server:
-  context-path: /categories
+  servlet:
+    context-path: /categories
   port: 4000
 
 spring:

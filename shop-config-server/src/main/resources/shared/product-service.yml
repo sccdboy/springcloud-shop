@@ -1,16 +1,15 @@
 security:
-  basic:
-    enabled: false
   oauth2:
     client:
       clientId: product-service
-      clientSecret: secret
+      clientSecret: 123456
       accessTokenUri: http://localhost:5000/auth/oauth/token
       grant-type: client_credentials
       scope: server
 
 server:
-  context-path: /products
+  servlet:
+    context-path: /products
   port: 8000
 
 spring:
